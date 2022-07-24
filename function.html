@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*function creation*/
+
+        // const numbers = [9, 16, 25];
+        // var newVar = numbers.map(Math.sqrt);
+        // console.log(newVar);
+
+
+        // function add(number1, number2){
+        //     result = number1+number2;
+        //     result2 = number1-number2;
+        //     result3 = number1/number2;
+        //     result4 = number1%number2;
+        //     console.log(result +','+ result2+','+result3+','+result4);
+        // }
+        // add(12,2);
+
+        // var marks = [20,30,40,50,90]
+        // var grade = marks.map((e) => e> 35 ? 'pass':'fail');
+        // console.log(grade);
+
+
+
+        // /*call back*/
+
+
+        // function first(getcallfun){
+        //     console.log('this is first print');
+        //     getcallfun();
+        // }
+        // function second(){
+        //     console.log('this is second print')
+        // }
+        // first(second);
+        // /*2nd one*/
+        // function values(a,b,callBack){
+        //     let result = a+b;
+        //     console.log('add')
+        //     callBack(result);
+        // }
+        // function showResult(result){
+        //     console.log('result=',result);
+        // }
+        // values(10,20,showResult)
+
+        /*3rd one*/
+
+        // function first(sameValue){
+        //     console.log('last');
+        //     sameValue();
+        // }
+        // function second(sameValue){
+        //     console.log('middle');
+        //     sameValue();
+        // }
+        // function third(sameValue){
+        //     console.log('first');
+        //     sameValue();
+        // }
+        // function appendValue(sameValue){
+        //     third(function(){
+        //         second(function(){
+        //             first(sameValue)
+        //         })
+        //     })
+        // }
+        // appendValue(function(){
+        //     console.log('finish it');
+        // })
+
+
+        // Find  Square root of a given number like this .
+        // x=2 y=sqrt of (x)
+        // z= sqrt of (y)
+        // c = sqrt of(z)
+        // Passing 2 should give the result of C as response when calling this function
+
+
+
+
+
+        /*process*/ /*multilevel function collBack*/
+
+        // x=2
+        // sqrt x = y
+        // sqrt y = z
+        // sqrt z = c
+
+
+        function newValue(number,xvalue,yvalue,zvalue){
+            var x = Math.sqrt(number);
+            console.log('sq root of x value: '+x); 
+            xvalue(x);
+        }
+        function xvalue(x){
+            var y = Math.sqrt(x);
+            console.log('sq root of y value: '+y);
+            yvalue(y);
+        }
+        function yvalue(y){
+            var z = Math.sqrt(y);
+            console.log('sq root of z value: '+z);
+            zvalue(z);
+        }
+        function zvalue(z){
+            var c = Math.sqrt(z);
+            console.log('sq root of c value: '+c);
+
+        }
+        newValue(64,xvalue,yvalue,zvalue);
+
+
+        // // method 2
+
+        
+
+
+        // /*method 3*/
+
+        // function newValue(number, xValFunc, yValFunc, zValFunc) {
+        //     var x = Math.sqrt(number);
+        //     console.log('sq root of x value: ' + x);
+        //     return xValFunc(x, yValFunc, zValFunc);
+        // }
+        // function xvalue(x, yValFunc, zValFunc) {
+        //     var y = Math.sqrt(x);
+        //     console.log('sq root of y value: ' + y);
+        //     return yValFunc(y, zValFunc);
+        // }
+        // function yvalue(y, zValFunc) {
+        //     var z = Math.sqrt(y);
+        //     console.log('sq root of z value: ' + z);
+        //     return zValFunc(z);
+        // }
+        // function zvalue(z, callValue) {
+        //     var c = Math.sqrt(z);
+        //     console.log('sq root of c value: ' + c);
+        //     return c;
+        // }
+        // newValue(64, xvalue, yvalue, zvalue);
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

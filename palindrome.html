@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // var a = 101;
+        // var b = a;
+        // var num = 0;
+
+        // while (a != 0) {
+        //     num = (num * 10) + (a % 10);
+        //     a = parseInt(a / 10);
+        //     console.log(num);
+        // }
+        // if (b == num) {
+        //     console.log('palindrome');
+        // }
+        // else {
+        //     console.log('not palindrome');
+        // }
+
+        // /*second method*/
+
+        // var rem, temp, final = 0;
+        // var number = 11011;
+
+        // temp = number;
+        // while (number > 0) {
+
+        //     rem = number % 10;
+        //     number = parseInt(number / 10);
+        //     final = final * 10 + rem;
+        //     console.log(final);
+        // }
+        // if (final == temp) {
+        //     console.log("Palindrome");
+        // }
+        // else {
+        //     console.log("not palindrome");
+        // }
+
+
+
+        /*string palandrome*/
+        console.log('for loop')
+
+        var changeName = 'madam';
+        var newChangeName = '';
+        var copy = changeName;
+        for (var i = changeName.length - 1; i >= 0; i--) {
+            newChangeName += changeName[i];
+            console.log('itration :', newChangeName);
+            if (copy == newChangeName) {
+                console.log('palandrome');
+            }
+            // else {
+            //     console.log('not palandrome');
+            // }
+        }
+        console.log('while loop')
+
+        /*using While loop*/
+        var str = 'ramar';
+        var newStr = '';
+        var copy = str;
+        var i = str.length - 1;
+        while (i >= 0) {
+            newStr += str[i];
+            console.log('itration: ',newStr);
+            i--;
+            if (copy == newStr) {
+                console.log('palindrome');
+
+            }
+
+        }
+
+        do{
+
+        }
+        while(i>=0);
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

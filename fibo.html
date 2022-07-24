@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feb0</title>
+</head>
+
+<body>
+    <script>
+        var number = 8;
+        var num1 = 0, num2 = 1;
+        var temp;
+
+        for (i = 0; i < number; i++) {
+            if (i <= 1) {
+                temp = i;
+            }
+            else {
+                temp = num1 + num2;
+                num1 = num2;
+                num2 = temp;
+
+            }
+
+            console.log(num1 + " + " + temp + " = " + (num1 + num2));
+
+        }
+
+        /*other methods*/
+        var n = 8;
+        var num;
+        var newNum1 = 0;
+        var newNum2 = 1;
+
+        for (var i = 0; i < n; i++) {
+            newNum = newNum1 + newNum2;
+            newNum1 = newNum2;
+            newNum2 = newNum;
+            console.log(newNum2);
+        }
+
+    </script>
+</body>
+
+</html>
